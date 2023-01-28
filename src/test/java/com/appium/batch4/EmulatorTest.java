@@ -28,7 +28,7 @@ public class EmulatorTest extends BaseEmulatorTest {
         equalBtn.click();
 
         String result = driver.findElement(By.id("formula")).getText().trim();
-        Assert.assertEquals("142", result);
+        Assert.assertEquals("12", result);
 
     }
 

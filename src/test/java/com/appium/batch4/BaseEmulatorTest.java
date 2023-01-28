@@ -20,6 +20,9 @@ public class BaseEmulatorTest {
         capabilities.setCapability("platformVersion", "10");
         capabilities.setCapability("appPackage", "com.thecompletecalculator.cocal");
         capabilities.setCapability("appActivity", ".activities.MainActivity ");
+        capabilities.setCapability("noReset", "true");
+        capabilities.setCapability("fullReset", "false");
+
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
