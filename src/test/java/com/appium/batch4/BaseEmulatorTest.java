@@ -18,8 +18,8 @@ public class BaseEmulatorTest {
         capabilities.setCapability("udid", "192.168.56.101:5555");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "10");
-        capabilities.setCapability("appPackage", "com.android.quicksearchbox");
-        capabilities.setCapability("appActivity", ".SearchActivity");
+        capabilities.setCapability("appPackage", "com.thecompletecalculator.cocal");
+        capabilities.setCapability("appActivity", ".activities.MainActivity ");
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
