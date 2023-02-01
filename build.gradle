@@ -22,6 +22,10 @@ dependencies {
     testImplementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
     // FileUtils.copyFile
     testImplementation 'commons-io:commons-io:2.11.0'
+
+    //POI
+    testImplementation 'org.apache.poi:poi:5.2.2'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
 }
 
 test {
