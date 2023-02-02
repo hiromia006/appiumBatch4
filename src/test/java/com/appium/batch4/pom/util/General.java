@@ -1,14 +1,19 @@
 package com.appium.batch4.pom.util;
 
+import com.appium.batch4.pom.BaseEmiCalculatorTest;
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class General {
+public class General extends BaseEmiCalculatorTest {
     final public static int TIME_OUT = 30;
 
     public static void waitForDomStable() {
@@ -45,6 +50,12 @@ public class General {
             }
         }
         return data;
+    }
+
+    public static void takeScreenshotAtEndOfTest() throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String currentDir = System.getProperty("user.dir")+ "/build/screenshots/" ;
+        FileUtils.copyFile(scrFile, new File(currentDir + System.currentTimeMillis() + ".png"));
     }
 
 }

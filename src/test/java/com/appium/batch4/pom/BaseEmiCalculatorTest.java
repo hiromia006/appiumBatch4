@@ -49,10 +49,13 @@ public class BaseEmiCalculatorTest {
     }
 
     protected void stopRecording() {
-        String projectHomeDirectory = System.getProperty("user.dir");
         String base64String = driver.stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
+
+        //prepare video save directory path
+        String projectHomeDirectory = System.getProperty("user.dir");
         String destinationPath = projectHomeDirectory + "/build/videos";
+
         File theDir = new File(destinationPath);
         if (!theDir.exists()) {
             theDir.mkdirs();
