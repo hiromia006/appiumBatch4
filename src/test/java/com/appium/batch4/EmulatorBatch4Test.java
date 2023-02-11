@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EmulatorTest extends BaseEmulatorTest {
+public class EmulatorBatch4Test extends BaseEmulatorBatch4Test {
 
     @Test
     public void addShouldSucceed() throws InterruptedException {

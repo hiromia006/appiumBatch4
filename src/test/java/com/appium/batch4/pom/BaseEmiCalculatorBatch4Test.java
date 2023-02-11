@@ -16,7 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 
-public class BaseEmiCalculatorTest {
+public class BaseEmiCalculatorBatch4Test {
     protected static AndroidDriver driver;
 
     @BeforeClass

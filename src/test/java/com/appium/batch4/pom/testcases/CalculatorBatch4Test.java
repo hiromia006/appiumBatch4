@@ -1,7 +1,7 @@
 package com.appium.batch4.pom.testcases;
 
-import com.appium.batch4.pom.BaseEmiCalculatorTest;
-import com.appium.batch4.pom.pages.CalculatorPage;
+import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.pages.CalculatorPageBatch4;
 import com.appium.batch4.pom.pages.HomePage;
 import com.appium.batch4.pom.util.General;
 import org.testng.Assert;
@@ -9,8 +9,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CalculatorTest extends BaseEmiCalculatorTest {
-    CalculatorPage calculatorPage;
+public class CalculatorBatch4Test extends BaseEmiCalculatorBatch4Test {
+    CalculatorPageBatch4 calculatorPage;
 
     @BeforeClass
     public void initialization() {

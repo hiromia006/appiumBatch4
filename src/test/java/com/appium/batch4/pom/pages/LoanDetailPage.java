@@ -1,11 +1,11 @@
 package com.appium.batch4.pom.pages;
 
-import com.appium.batch4.pom.BaseEmiCalculatorTest;
+import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoanDetailPage extends BaseEmiCalculatorTest {
+public class LoanDetailPage extends BaseEmiCalculatorBatch4Test {
     @FindBy(id = "loan_amount_result")
     WebElement loan_amount_result;
 

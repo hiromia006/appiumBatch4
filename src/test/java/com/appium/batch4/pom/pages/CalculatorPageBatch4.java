@@ -1,16 +1,11 @@
 package com.appium.batch4.pom.pages;
 
-import com.appium.batch4.pom.BaseEmiCalculatorTest;
-import com.appium.batch4.pom.util.General;
-import io.appium.java_client.pagefactory.AndroidBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.time.Duration;
-
-public class CalculatorPage extends BaseEmiCalculatorTest {
+public class CalculatorPageBatch4 extends BaseEmiCalculatorBatch4Test {
     @FindBy(id = "etLoanAmount")
     WebElement etLoanAmount;
 
@@ -35,19 +30,19 @@ public class CalculatorPage extends BaseEmiCalculatorTest {
     @FindBy(id = "btnDetail")
     WebElement btnDetail;
 
-    public CalculatorPage() {
+    public CalculatorPageBatch4() {
 //        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(General.TIME_OUT)), this);
         PageFactory.initElements(driver, this);
     }
 
-    public CalculatorPage fillLoanAmount(int amount) {
+    public CalculatorPageBatch4 fillLoanAmount(int amount) {
         etLoanAmount.isDisplayed();
         etLoanAmount.clear();
         etLoanAmount.sendKeys(String.valueOf(amount));
         return this;
     }
 
-    public CalculatorPage fillInterestPercentage(int interest) {
+    public CalculatorPageBatch4 fillInterestPercentage(int interest) {
         etInterest.isDisplayed();
         etInterest.clear();
         etInterest.sendKeys(String.valueOf(interest));
@@ -55,34 +50,34 @@ public class CalculatorPage extends BaseEmiCalculatorTest {
     }
 
 
-    public CalculatorPage fillYear(int year) {
+    public CalculatorPageBatch4 fillYear(int year) {
         etYears.isDisplayed();
         etYears.clear();
         etYears.sendKeys(String.valueOf(year));
         return this;
     }
 
-    public CalculatorPage fillMonth(int months) {
+    public CalculatorPageBatch4 fillMonth(int months) {
         etMonths.isDisplayed();
         etMonths.clear();
         etMonths.sendKeys(String.valueOf(months));
         return this;
     }
 
-    public CalculatorPage fillProcessFee(int fee) {
+    public CalculatorPageBatch4 fillProcessFee(int fee) {
         etFee.isDisplayed();
         etFee.clear();
         etFee.sendKeys(String.valueOf(fee));
         return this;
     }
 
-    public CalculatorPage tapCalculatorBtn() {
+    public CalculatorPageBatch4 tapCalculatorBtn() {
         btnCalculate.isDisplayed();
         btnCalculate.click();
         return this;
     }
 
-    public CalculatorPage tapResetBtn() {
+    public CalculatorPageBatch4 tapResetBtn() {
         btnReset.isDisplayed();
         btnReset.click();
         return this;

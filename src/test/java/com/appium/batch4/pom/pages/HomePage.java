@@ -1,12 +1,12 @@
 package com.appium.batch4.pom.pages;
 
-import com.appium.batch4.pom.BaseEmiCalculatorTest;
+import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class HomePage extends BaseEmiCalculatorTest {
+public class HomePage extends BaseEmiCalculatorBatch4Test {
     @FindBy(id = "btnStart")
     WebElement emiCalculatorBtn;
 
@@ -18,10 +18,10 @@ public class HomePage extends BaseEmiCalculatorTest {
         PageFactory.initElements(driver, this);
     }
 
-    public CalculatorPage tapEmiCalculatorBtn() {
+    public CalculatorPageBatch4 tapEmiCalculatorBtn() {
         emiCalculatorBtn.isDisplayed();
         emiCalculatorBtn.click();
-        return new CalculatorPage();
+        return new CalculatorPageBatch4();
     }
 
     public CompareLoanPage tapCompareLoanBtn() {
