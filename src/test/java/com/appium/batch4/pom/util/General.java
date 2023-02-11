@@ -25,7 +25,7 @@ public class General extends BaseEmiCalculatorTest {
     }
 
     public static Object[][] getTestData(String sheetName) {
-        String path = System.getProperty("user.dir") + "/src/test/java/com/parabank/parasoft/pom/testdata/ddt.xlsx";
+        String path = System.getProperty("user.dir") + "/src/test/java/com/appium/batch4/pom/testData/data.xlsx";
         Workbook book = null;
         Sheet sheet;
         FileInputStream file = null;
@@ -43,9 +43,9 @@ public class General extends BaseEmiCalculatorTest {
         Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
         // System.out.println(sheet.getLastRowNum() + "--------" +
         // sheet.getRow(0).getLastCellNum());
-        for (int i = 0; i < sheet.getLastRowNum(); i++) {
+        for (int i = 0; i <= sheet.getLastRowNum(); i++) {
             for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
-                data[i][k] = sheet.getRow(i + 1).getCell(k).toString();
+                data[i][k] = sheet.getRow(i + 1).getCell(k).toString().replace(".0", "").trim();
                 System.out.println(data[i][k]);
             }
         }
@@ -54,7 +54,7 @@ public class General extends BaseEmiCalculatorTest {
 
     public static void takeScreenshotAtEndOfTest() throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String currentDir = System.getProperty("user.dir")+ "/build/screenshots/" ;
+        String currentDir = System.getProperty("user.dir") + "/build/screenshots/";
         FileUtils.copyFile(scrFile, new File(currentDir + System.currentTimeMillis() + ".png"));
     }
 

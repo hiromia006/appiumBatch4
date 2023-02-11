@@ -1,5 +1,6 @@
 package com.appium.batch4;
 
+import com.appium.batch4.pom.util.General;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -15,21 +16,19 @@ public class BaseTest {
     @BeforeClass
     public void initialization() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("udid", "R9KR603BLXJ");
-        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("udid", "192.168.56.101:5555");
         capabilities.setCapability("platformVersion", "10");
-        capabilities.setCapability("appPackage", "com.sec.android.app.popupcalculator");
-        capabilities.setCapability("appActivity", ".Calculator");
-        capabilities.setCapability("noReset", "true");
-        capabilities.setCapability("fullReset", "false");
+        capabilities.setCapability("appPackage", "com.continuum.emi.calculator");
+        capabilities.setCapability("appActivity", "com.finance.emicalci.activity.Splash_screnn");
+        capabilities.setCapability("platformName", "Android");
 
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(General.TIME_OUT));
+        General.waitForDomStable();
 
     }
 
