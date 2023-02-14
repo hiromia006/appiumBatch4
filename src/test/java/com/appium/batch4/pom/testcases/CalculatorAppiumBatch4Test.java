@@ -1,15 +1,15 @@
 package com.appium.batch4.pom.testcases;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import com.appium.batch4.pom.pages.CalculatorPageBatch4;
 import com.appium.batch4.pom.pages.HomePage;
-import com.appium.batch4.pom.util.General;
+import com.appium.batch4.pom.util.GeneralAppiumBatch4;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CalculatorBatch4Test extends BaseEmiCalculatorBatch4Test {
+public class CalculatorAppiumBatch4Test extends BaseEmiCalculatorAppiumBatch4Test {
     CalculatorPageBatch4 calculatorPage;
 
     @BeforeClass
@@ -57,7 +57,7 @@ public class CalculatorBatch4Test extends BaseEmiCalculatorBatch4Test {
 
     @DataProvider
     public Object[][] loanInfo() {
-        return General.getTestData("Sheet1");
+        return GeneralAppiumBatch4.getTestData("Sheet1");
     }
 
 }

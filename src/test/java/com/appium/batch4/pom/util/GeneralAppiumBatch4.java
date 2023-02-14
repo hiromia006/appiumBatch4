@@ -1,6 +1,6 @@
 package com.appium.batch4.pom.util;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -13,7 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class General extends BaseEmiCalculatorBatch4Test {
+public class GeneralAppiumBatch4 extends BaseEmiCalculatorAppiumBatch4Test {
     final public static int TIME_OUT = 30;
 
     public static void waitForDomStable() {

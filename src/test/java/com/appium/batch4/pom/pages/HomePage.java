@@ -1,12 +1,12 @@
 package com.appium.batch4.pom.pages;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class HomePage extends BaseEmiCalculatorBatch4Test {
+public class HomePage extends BaseEmiCalculatorAppiumBatch4Test {
     @FindBy(id = "btnStart")
     WebElement emiCalculatorBtn;
 

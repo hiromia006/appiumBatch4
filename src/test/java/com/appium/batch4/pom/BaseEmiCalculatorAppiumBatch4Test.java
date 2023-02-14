@@ -1,6 +1,6 @@
 package com.appium.batch4.pom;
 
-import com.appium.batch4.pom.util.General;
+import com.appium.batch4.pom.util.GeneralAppiumBatch4;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -16,7 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 
-public class BaseEmiCalculatorBatch4Test {
+public class BaseEmiCalculatorAppiumBatch4Test {
     protected static AndroidDriver driver;
 
     @BeforeClass
@@ -33,8 +33,8 @@ public class BaseEmiCalculatorBatch4Test {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(General.TIME_OUT));
-        General.waitForDomStable();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralAppiumBatch4.TIME_OUT));
+        GeneralAppiumBatch4.waitForDomStable();
 
         //Start recording screen
         driver.startRecordingScreen();

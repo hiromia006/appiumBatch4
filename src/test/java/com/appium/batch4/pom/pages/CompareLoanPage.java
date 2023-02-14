@@ -1,13 +1,13 @@
 package com.appium.batch4.pom.pages;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CompareLoanPage extends BaseEmiCalculatorBatch4Test {
+public class CompareLoanPage extends BaseEmiCalculatorAppiumBatch4Test {
     @FindBy(id = "etLoanAmount1")
     WebElement etLoanAmount1;
 

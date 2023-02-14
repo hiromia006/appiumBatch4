@@ -1,12 +1,12 @@
 package com.appium.batch4.pom.testcases;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import com.appium.batch4.pom.pages.CompareLoanPage;
 import com.appium.batch4.pom.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CompareLoanBatch4Test extends BaseEmiCalculatorBatch4Test {
+public class CompareLoanBatch4Test extends BaseEmiCalculatorAppiumBatch4Test {
     HomePage homePage;
     CompareLoanPage compareLoanPage;
 

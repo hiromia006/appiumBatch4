@@ -1,6 +1,6 @@
 package com.appium.batch4.pom.testcases;
 
-import com.appium.batch4.pom.BaseEmiCalculatorBatch4Test;
+import com.appium.batch4.pom.BaseEmiCalculatorAppiumBatch4Test;
 import com.appium.batch4.pom.pages.CalculatorPageBatch4;
 import com.appium.batch4.pom.pages.HomePage;
 import com.appium.batch4.pom.pages.LoanDetailPage;
@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoanDetailBatch4Test extends BaseEmiCalculatorBatch4Test {
+public class LoanDetailBatch4Test extends BaseEmiCalculatorAppiumBatch4Test {
     CalculatorPageBatch4 calculatorPage;
     LoanDetailPage loanDetailPage;
     @BeforeClass
